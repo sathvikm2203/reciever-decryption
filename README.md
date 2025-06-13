@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
 
-## Project info
+# Blue Key Decryptor Pro
 
-**URL**: https://lovable.dev/projects/83452745-fdb0-4d8e-8343-0732e5f9031d
+A secure desktop application for decrypting .drm files with password authentication.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **File Upload**: Select and decrypt .drm files
+- **Password Protection**: Secure password-based decryption
+- **Multi-format Support**: Preview PDFs, images, and text files
+- **Security Features**: Built-in copy protection and watermarking
+- **Offline Operation**: Works completely offline once built
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/83452745-fdb0-4d8e-8343-0732e5f9031d) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technology Stack
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Frontend**: React + TypeScript + Vite
+- **UI Components**: shadcn/ui
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **State Management**: TanStack Query
 
-## How can I deploy this project?
+## Development Setup
 
-Simply open [Lovable](https://lovable.dev/projects/83452745-fdb0-4d8e-8343-0732e5f9031d) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js & npm installed ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- FastAPI backend running on http://localhost:8000
 
-Yes, you can!
+### Getting Started
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+# Clone the repository
+git clone <YOUR_GIT_URL>
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+# Navigate to the project directory
+cd <YOUR_PROJECT_NAME>
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The application will be available at `http://localhost:8080`
+
+### Building for Production
+
+```sh
+# Build the application
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+## Backend Integration
+
+This application expects a FastAPI backend running on `http://localhost:8000` with the following endpoint:
+
+- `POST /decrypt` - Accepts .drm files and passwords for decryption
+
+## Deployment Options
+
+### Desktop Application (.exe)
+
+1. **FastAPI Backend**: Package with PyInstaller
+2. **React Frontend**: Package with Electron
+3. **Distribution**: Single or separate executable files
+
+### Web Deployment
+
+The built application can be deployed to any static hosting service.
+
+## Security Features
+
+- Right-click blocking
+- Copy/paste prevention  
+- Screenshot hotkey blocking
+- Content watermarking
+- Read-only file previews
+
+## File Format Support
+
+- **PDF**: Full preview with embedded watermarks
+- **Images**: JPG, PNG, GIF, BMP with overlay protection
+- **Text**: Syntax-highlighted viewer with CSS watermarks
+
+## License
+
+This project is proprietary software for secure file decryption.
